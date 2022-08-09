@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List 2022 with LocalStorage</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- End of CSS -->
+  </head>
+  <body>
+    <!-- App Wrapper -->
+    <main class="app">
+      <section class="todo m-5">
+        <h1>TO DO APP</h1>
+        <form id="add-todo">
+          <div class="form-floating mb-3 d-flex flex-column">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="new-todo"
+            />
+            <label for="new-todo">New To Do</label>
+            <button
+              class="btn btn-outline-primary"
+              type="submit"
+              value="add-todo"
+            >
+              Add To Do
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="todo-list m-5">
+        <h2>TODO LIST</h2>
+        <div class="list" id="todo-list">
+          <div class="input-group">
+            <div class="input-group-text high-priority">
+              <input class="form-check-input mt-0" type="checkbox" value="" />
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="High Priority"
+            />
+            <button class="btn btn-outline-secondary" type="button" id="edit">
+              <i class="bx bx-edit-alt"></i>
+            </button>
+            <button class="btn btn-outline-secondary" type="button" id="delete">
+              <i class="bx bx-trash"></i>
+            </button>
+          </div>
+          <br />
+          <div class="input-group">
+            <div class="input-group-text medium-priority">
+              <input class="form-check-input mt-0" type="checkbox" value="" />
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Medium Priority"
+            />
+            <button class="btn btn-outline-secondary" type="button" id="edit">
+              <i class="bx bx-edit-alt"></i>
+            </button>
+            <button class="btn btn-outline-secondary" type="button" id="delete">
+              <i class="bx bx-trash"></i>
+            </button>
+          </div>
+          <br />
+          <div class="input-group">
+            <div class="input-group-text low-priority">
+              <input class="form-check-input mt-0" type="checkbox" value="" />
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Low Priority"
+            />
+            <button class="btn btn-outline-secondary" type="button" id="edit">
+              <i class="bx bx-edit-alt"></i>
+            </button>
+            <button class="btn btn-outline-secondary" type="button" id="delete">
+              <i class="bx bx-trash"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="completed-done m-5">
+        <h2>DONE TASKS</h2>
+        <div class="list" id="todo-list">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control task-done"
+              placeholder="High Priority"
+            />
+          </div>
+          <br />
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control task-done"
+              placeholder="Medium Priority"
+            />
+          </div>
+          <br />
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control task-done"
+              placeholder="Low Priority"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
