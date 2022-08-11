@@ -15,7 +15,27 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
+  /* p {
+    padding: 0 !important;
+  } */
+/* 
+  .input-group {
+    margin: 16px 0;
+  }
+
+  .form-control {
+    padding: 13px !important;
+  } */
+
+  .input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: baseline !important;
+}
+
   body {
     font-size: 10px;
   }
@@ -62,4 +82,18 @@
   .task-done {
     text-decoration: line-through;
   }
+
+  .input-group-text {
+    display: block !important;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
   
