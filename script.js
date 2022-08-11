@@ -16,38 +16,73 @@ addToDo.addEventListener("click", (e) => {
     console.log("Good job!");
   }
   // now we have to move the value we stored in the checklist
-  const task_el = document.querySelector("#todo-list");
 
-  console.log(task_el);
   // creates a new task line (I copy-pasted from index.html the code for input-group). Inside, we made a list and integrated the value saved in "task" as a string.
   // task_el.innerHTML += createTask(task);
   createToDo(task);
 });
-
-
-
 
 // Functions
 
 /* here we create the function that we're gonna call in the click event abobe. 
  the var that contain the query selector must be delared globally otherwise there's an error ? */
 const createToDo = (task) => {
-  const firstDiv = document.createElement("div"); 
-  //firstDiv.classList("input-group"); 
+  console.log(task);
+  const firstDiv = document.createElement("div");
+  firstDiv.classList.add("input-group");
+
   const secondDiv = document.createElement("div");
-  //secondDiv.classList("input-group-text");
+  secondDiv.classList.add("input-group-text");
+  secondDiv.classList.add("low-priority");
+
   const checkbox = document.createElement("input");
-  //checkbox.classList("form-check-input mt-0");
-  const taskList = document.createElement("li");
-  //taskList.classList("form-control");
-  taskList.innerText = task;
+  checkbox.classList.add("form-check-input");
+  checkbox.classList.add("mt-0");
+  checkbox.type = "checkbox";
+
+  const taskList = document.createElement("p");
+  taskList.classList.add("form-control");
+  taskList.textContent = task;
+
   const buttonEdit = document.createElement("button");
-  const buttonDelete = document.createElement("button")
+  buttonEdit.classList.add("btn");
+  buttonEdit.classList.add("btn-outline-secondary");
+
+  const editIcon = document.createElement("i");
+  editIcon.classList.add("bx");
+  editIcon.classList.add("bx-edit-alt");
+
+  const buttonDelete = document.createElement("button");
+  buttonDelete.classList.add("btn");
+  buttonDelete.classList.add("btn-outline-secondary");
+
+  const deleteIcon = document.createElement("i");
+  deleteIcon.classList.add("bx");
+  deleteIcon.classList.add("bx-trash");
+
   locateFirstDiv.append(firstDiv);
   firstDiv.append(secondDiv, taskList, buttonEdit, buttonDelete);
   secondDiv.append(checkbox);
+  buttonEdit.append(editIcon);
+  buttonDelete.append(deleteIcon);
 };
 
+/*           <div class="input-group">
+            <div class="input-group-text low-priority">
+              <input class="form-check-input mt-0" type="checkbox" value="" />
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Low Priority"
+            />
+            <button class="btn btn-outline-secondary" type="button" id="edit">
+              <i class="bx bx-edit-alt"></i>
+            </button>
+            <button class="btn btn-outline-secondary" type="button" id="delete">
+              <i class="bx bx-trash"></i>
+            </button>
+          </div> */
 
 // const createTask = (task) => {
 //   return `<div class="input-group">
