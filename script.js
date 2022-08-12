@@ -65,6 +65,10 @@ const createToDo = (task) => {
   secondDiv.append(checkbox);
   buttonEdit.append(editIcon);
   buttonDelete.append(deleteIcon);
+
+  buttonDelete.addEventListener("click", (e) => {
+    firstDiv.remove();
+  });
 };
 
 /*           <div class="input-group">
