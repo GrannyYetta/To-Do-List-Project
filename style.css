@@ -38,6 +38,7 @@
 
   body {
     font-size: 10px;
+    background-image: linear-gradient( 100deg ,#F9F9F9, #FAF4B7, #F6C6EA) !important;
   }
   
   section {
