@@ -35,10 +35,14 @@
     width: 100%;
     align-items: baseline !important;
 }
+html {
+height: 100%;
 
+}
   body {
     font-size: 10px;
-    background-image: linear-gradient( 100deg ,#F9F9F9, #FAF4B7, #F6C6EA) !important;
+    background-image: linear-gradient( 60deg ,#F9F9F9, #FAF4B7, #F6C6EA);
+    height: 100%;
   }
   
   section {
