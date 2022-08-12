@@ -60,11 +60,24 @@ const createToDo = (task) => {
   deleteIcon.classList.add("bx");
   deleteIcon.classList.add("bx-trash");
 
+  checkbox.addEventListener("change", (e) => {
+    const checkTaskOff = document.querySelector("#done-todo");
+    if (checkbox.checked) {
+      taskList.style.textDecoration = "line-through";
+      checkTaskOff.append(firstDiv);
+    } else {
+      taskList.style.textDecoration = "none";
+      locateFirstDiv.append(firstDiv);
+    }
+  });
+
   locateFirstDiv.append(firstDiv);
   firstDiv.append(secondDiv, taskList, buttonEdit, buttonDelete);
   secondDiv.append(checkbox);
   buttonEdit.append(editIcon);
   buttonDelete.append(deleteIcon);
+
+  input.value = "";
 };
 
 /*           <div class="input-group">
