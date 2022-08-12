@@ -2,7 +2,7 @@
 const locateFirstDiv = document.querySelector("#todo-list");
 let addToDo = document.querySelector("#submit-to-do");
 let input = document.querySelector("#new-todo-input");
-
+const missingTask = document.querySelector("#new-to-do");
 // Event Listeners
 addToDo.addEventListener("click", (e) => {
   // ---> so far, nothing should happen here when the button is clicked. page refresh cancelled.
@@ -11,9 +11,12 @@ addToDo.addEventListener("click", (e) => {
   const task = input.value;
   // if there's nothing typed, it console logs "add a task pls" , otherwise, you did a good job
   if (!task) {
-    console.log("add a task pls"); //logging instead of alert is a personal choice
+   // missingTask.innerText = "Please add a task"; //logging instead of alert is a personal choice
+   console.log("Good job!");
+    return;
   } else {
     console.log("Good job!");
+    
   }
   // now we have to move the value we stored in the checklist
 
@@ -76,6 +79,7 @@ const createToDo = (task) => {
       locateFirstDiv.append(firstDiv);
     }
   });
+
 
   buttonEdit.addEventListener("click", (e) => {
     taskList.contentEditable = true;
