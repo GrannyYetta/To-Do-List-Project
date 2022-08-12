@@ -80,9 +80,11 @@ const createToDo = (task) => {
     }
   });
 
-  buttonEdit.addEventListener ("click", ()=>{
+
+  buttonEdit.addEventListener("click", (e) => {
     taskList.contentEditable = true;
-  })
+  });
+
   buttonDelete.addEventListener("click", () => {
     firstDiv.remove();
   });
