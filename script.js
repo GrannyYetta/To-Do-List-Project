@@ -78,10 +78,11 @@ const createToDo = (task) => {
   buttonDelete.append(deleteIcon);
 
 
-
-  buttonDelete.addEventListener("click", (e) => {
+  buttonDelete.addEventListener("click", () => {
     firstDiv.remove();
   });
+
+  input.value = "";
 };
 
 /*           <div class="input-group">
