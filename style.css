@@ -8,6 +8,11 @@
   
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
+
+  h1, h2 {
+
+    font-family: 'Arsenal', sans-serif;
+  }
   
   /* Resets */
   * {
