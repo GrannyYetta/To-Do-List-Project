@@ -40,6 +40,11 @@
     font-size: 10px;
   }
   
+  .angled-gradient {
+    background: linear-gradient(70deg, #F9F9F9, #F6C6EA, #FAF4B7) !important;
+  }
+  
+
   section {
     margin: 0 auto;
     padding-left: 1.5rem;

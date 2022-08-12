@@ -60,6 +60,12 @@ const createToDo = (task) => {
   deleteIcon.classList.add("bx");
   deleteIcon.classList.add("bx-trash");
 
+  locateFirstDiv.append(firstDiv);
+  firstDiv.append(secondDiv, taskList, buttonEdit, buttonDelete);
+  secondDiv.append(checkbox);
+  buttonEdit.append(editIcon);
+  buttonDelete.append(deleteIcon);
+
   checkbox.addEventListener("change", (e) => {
     const checkTaskOff = document.querySelector("#done-todo");
     if (checkbox.checked) {
@@ -71,12 +77,9 @@ const createToDo = (task) => {
     }
   });
 
-  locateFirstDiv.append(firstDiv);
-  firstDiv.append(secondDiv, taskList, buttonEdit, buttonDelete);
-  secondDiv.append(checkbox);
-  buttonEdit.append(editIcon);
-  buttonDelete.append(deleteIcon);
-
+  buttonEdit.addEventListener("click", (e) => {
+    taskList.contentEditable = true;
+  });
 
   buttonDelete.addEventListener("click", () => {
     firstDiv.remove();
