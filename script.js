@@ -77,7 +77,11 @@ const createToDo = (task) => {
   buttonEdit.append(editIcon);
   buttonDelete.append(deleteIcon);
 
-  input.value = "";
+
+
+  buttonDelete.addEventListener("click", (e) => {
+    firstDiv.remove();
+  });
 };
 
 /*           <div class="input-group">
