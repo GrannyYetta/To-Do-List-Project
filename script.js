@@ -11,12 +11,11 @@ addToDo.addEventListener("click", (e) => {
   const task = input.value;
   // if there's nothing typed, it console logs "add a task pls" , otherwise, you did a good job
   if (!task) {
-   // missingTask.innerText = "Please add a task"; //logging instead of alert is a personal choice
-   console.log("Good job!");
+    // missingTask.innerText = "Please add a task"; //logging instead of alert is a personal choice
+    alert("Please add a task.");
     return;
   } else {
     console.log("Good job!");
-    
   }
   // now we have to move the value we stored in the checklist
 
@@ -79,7 +78,6 @@ const createToDo = (task) => {
       locateFirstDiv.append(firstDiv);
     }
   });
-
 
   buttonEdit.addEventListener("click", (e) => {
     taskList.contentEditable = true;
